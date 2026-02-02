@@ -11,9 +11,11 @@
     --borderShadow: #000000f2;
     --borderBottom: #00fff7d0;
 
+    --footerColor: #35826e;
+
     /* Page size Options */
 
-    --pageMaxWidth: 1200px;
+    --pageMaxWidth: 1280px;
     --pagePadding: 24px;
     --headerHeight: 120px;
 
@@ -72,7 +74,7 @@ header {
     min-height: 100vh;
 }
 
-.content {  
+.index-content {  
     max-width: var(--pageMaxWidth);
     margin: 0 auto;
     padding: 0 var(--pagePadding);
@@ -88,10 +90,25 @@ header {
     padding: 50px;
 }
 
+/* Style für den Footer */
+
+footer {
+    background-color: var(--footerColor);
+    border-top: 1px solid rgba(56, 189, 248, 0.15);
+    color: var(--text);
+}
+
+.footer-content {
+    max-width: var(--pageMaxWidth);
+    padding: 0 var(--pagePadding);
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* Mobile Ansicht */
 
 @media (max-width: 800px) {
-    .content {
+    .index-content {
         grid-template-columns: 1fr;
         gap: 32px;
     }
