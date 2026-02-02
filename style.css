@@ -35,7 +35,7 @@ body {
 /* Text --------------------------------------------------------------*/
 
 h1 {
-    font-size: 4rem;
+    font-size: 2.5rem; /* Mobile First */
     color: var(--h-text);
 }
 
@@ -68,7 +68,7 @@ header {
 }
 
 .start-page {
-    padding-top: calc(var(--headerHeight) + 40px);
+    padding-top: calc(var(--headerHeight) + 64px);
     padding-left: var(--pagePadding);
     padding-right: var(--pagePadding);
     min-height: 100vh;
@@ -79,15 +79,15 @@ header {
     margin: 0 auto;
     padding: 0 var(--pagePadding);
     display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 64px; 
+    grid-template-columns: 1fr; /* Mobile First */
+    gap: 32px; /* Mobile First */
 }
 
 .ivl-container,
 .fs-container {
     background-color: var(--indexBoxColor);
     border-radius: 12px;
-    padding: 50px;
+    padding: clamp(24px, 5vw, 50px); /* Mobile-tauglich */
 }
 
 /* Style für den Footer */
@@ -107,13 +107,15 @@ footer {
 
 /* Mobile Ansicht */
 
-@media (max-width: 800px) {
+@media (min-width: 801px) {
+
     .index-content {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
+
 }
