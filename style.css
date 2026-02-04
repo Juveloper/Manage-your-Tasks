@@ -35,7 +35,7 @@ body {
 /* Text --------------------------------------------------------------*/
 
 h1 {
-    font-size: 2.5rem; /* Mobile First */
+    font-size: clamp(2.5rem, 5vw, 4rem); 
     color: var(--h-text);
 }
 
@@ -79,15 +79,15 @@ header {
     margin: 0 auto;
     padding: 0 var(--pagePadding);
     display: grid; 
-    grid-template-columns: 1fr; /* Mobile First */
-    gap: 32px; /* Mobile First */
+    grid-template-columns: 1fr; 
+    gap: 32px; 
 }
 
 .ivl-container,
 .fs-container {
     background-color: var(--indexBoxColor);
     border-radius: 12px;
-    padding: clamp(24px, 5vw, 50px); /* Mobile-tauglich */
+    padding: clamp(24px, 5vw, 50px);
 }
 
 /* Style für den Footer */
@@ -100,7 +100,7 @@ footer {
 
 .footer-content {
     max-width: var(--pageMaxWidth);
-    padding: 0 var(--pagePadding);
+    padding: var(--pagePadding);
     margin: 0 auto;
     text-align: center;
 }
@@ -112,10 +112,6 @@ footer {
     .index-content {
         grid-template-columns: 1fr 1fr;
         gap: 64px;
-    }
-
-    h1 {
-        font-size: 4rem;
     }
 
 }
