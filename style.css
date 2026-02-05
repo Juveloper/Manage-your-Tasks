@@ -35,7 +35,7 @@ body {
 /* Text --------------------------------------------------------------*/
 
 h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem); 
+    
     color: var(--h-text);
 }
 
@@ -68,6 +68,9 @@ header {
 }
 
 .start-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: calc(var(--headerHeight) + 64px);
     padding-left: var(--pagePadding);
     padding-right: var(--pagePadding);
@@ -86,8 +89,8 @@ header {
 .ivl-container,
 .fs-container {
     background-color: var(--indexBoxColor);
-    border-radius: 12px;
-    padding: clamp(24px, 5vw, 50px);
+    border-radius: 8px;
+    padding: clamp(24px, 5vw, 50px); 
 }
 
 /* Style für den Footer */
@@ -100,7 +103,7 @@ footer {
 
 .footer-content {
     max-width: var(--pageMaxWidth);
-    padding: var(--pagePadding);
+    padding: 0 var(--pagePadding);
     margin: 0 auto;
     text-align: center;
 }
@@ -109,9 +112,19 @@ footer {
 
 @media (min-width: 801px) {
 
+    .start-page {
+        padding-top: calc(var(--headerHeight) - 64px);
+    }
+
     .index-content {
         grid-template-columns: 1fr 1fr;
         gap: 64px;
     }
 
+    h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        color: var(--h-text);
+    }
 }
+
+
