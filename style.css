@@ -2,16 +2,16 @@
 
     /* Colors */
 
-    --backgroundColor: #000f1b;
-    --indexBoxColor: #00055cdf;
-
-    --h-text: #a9f9ff;
+    --backgroundColor: #18182c;
+    --headerColor: #15192e;
+    --indexBoxColor: #2b3958;
+    --h-text: #f8b249;
     --text: #e0e0e0;
-
-    --borderShadow: #000000f2;
-    --borderBottom: #00fff7d0;
-
-    --footerColor: #35826e;
+    --linkColor: #82eeff;
+    --borderShadow: #000000cc;
+    --borderBottom: #ff1414ad;
+    --boxHoverColor: #a73cff;
+    --footerColor: #202b44;
 
     /* Page size Options */
 
@@ -43,6 +43,10 @@ p {
     color: var(--text);
 }
 
+a {
+    color: var(--linkColor);
+}
+
 /* index html style ---------------------------------------------------*/
 
 header { 
@@ -53,7 +57,7 @@ header {
     height: var(--headerHeight);
     border-bottom: 1px solid var(--borderBottom);
     box-shadow: 0 8px 16px var(--borderShadow);
-    background-color: var(--backgroundColor);
+    background-color: var(--headerColor);
     z-index: 1000;
 }
 
@@ -90,22 +94,43 @@ header {
 .fs-container {
     background-color: var(--indexBoxColor);
     border-radius: 8px;
-    padding: clamp(24px, 5vw, 50px); 
+    padding: clamp(24px, 5vw, 50px);
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+}
+
+.ivl-container:hover,
+.fs-container:hover {
+    outline-color: var(--boxHoverColor);
+}
+
+.method-title {
+    color: var(--h-text);
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.method-text {
+    margin-bottom: 24px;
 }
 
 /* Style für den Footer */
 
 footer {
     background-color: var(--footerColor);
-    border-top: 1px solid rgba(56, 189, 248, 0.15);
     color: var(--text);
 }
 
 .footer-content {
     max-width: var(--pageMaxWidth);
-    padding: 0 var(--pagePadding);
+    padding: var(--pagePadding);
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Mobile Ansicht */
@@ -123,7 +148,6 @@ footer {
 
     h1 {
         font-size: clamp(2.5rem, 5vw, 4rem);
-        color: var(--h-text);
     }
 }
 
