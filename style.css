@@ -2,15 +2,15 @@
 
     /* Colors */
 
-    --backgroundColor: #18182c;
-    --headerColor: #15192e;
-    --indexBoxColor: #2b3958;
-    --h-text: #f8b249;
-    --text: #e0e0e0;
-    --linkColor: #82eeff;
+    --backgroundColor: #0c0c1f;
+    --headerColor: #13162a;
+    --indexBoxColor: #293c4d;
+    --h-text: #f6ae06;
+    --text: #ece7e7;
+    --linkColor: #82f7ff;
     --borderShadow: #000000cc;
-    --borderBottom: #ff1414ad;
-    --boxHoverColor: #a73cff;
+    --borderBottom: #ff0404de;
+    --boxHoverColor: #ff040497;
     --footerColor: #202b44;
 
     /* Page size Options */
